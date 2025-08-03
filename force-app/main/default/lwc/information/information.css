@@ -1,0 +1,21 @@
+h1{
+    font-weight: bold;
+
+    text-align: center;
+
+    font-size: 40px;
+}
+
+.infoApp{
+    background: #b2beb5;
+}
+
+.staticInfo{
+    max-width: 650px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    background: #c5c7c9;
+}

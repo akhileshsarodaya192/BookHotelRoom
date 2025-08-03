@@ -1,0 +1,19 @@
+:host
+{
+    --slds-c-card-color-background:#b2beb5
+}
+
+.buttonNext{
+    text-align: center;
+    margin:auto;
+}
+
+.buttonBack{
+    text-align: center;
+    margin:auto;
+}
+
+.buttonFinish{
+    text-align: center;
+    margin: auto;
+}

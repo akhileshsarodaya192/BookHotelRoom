@@ -1,0 +1,91 @@
+<template>
+
+    <div class="slds-grid slds-wrap" style={backgroundStyle1}>
+
+        <div class="slds-col slds-size_4-of-12">
+
+            <div style={backgroundStyle1}></div>
+
+        </div>
+
+        <div class="slds-col slds-size_4-of-12">
+
+            <lightning-card title="Hotel Customer Details" icon-name="custom:custom63">
+
+            <lightning-record-edit-form record-id={recordId} object-api-name="Reservation__c" onsuccess={handleSuccess} onsubmit={handleSubmit}>
+
+                <lightning-messages>
+
+                </lightning-messages>
+
+                <br>
+
+                <br>
+
+            <lightning-output-field field-name="ReservationId">
+
+            </lightning-output-field>
+
+            <lightning-input-field field-name="Name">
+
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Customer_Name__c">
+                
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Phone__c">
+                
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Email_Id__c">
+                
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Aadhar_Card_Number__c">
+                
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Date_of_Reservation__c">
+                
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Check_in_Date__c">
+                
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Check_out_Date__c">
+                
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Room__c">
+                
+            </lightning-input-field>
+
+            <lightning-input-field field-name="Search_Hotel__c">
+                
+            </lightning-input-field>
+
+            <br>
+
+            <br>
+
+            <div class="buttonSave">
+            <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="Save" label="Save">
+
+            </lightning-button>
+            </div>
+
+            <br>
+            </lightning-record-edit-form>
+
+            </lightning-card>
+    </div>
+
+    <div class="slds-col slds-size_4-of-12">
+
+        <div style={backgroundStyle2}></div>
+
+    </div>
+    </div>
+</template>

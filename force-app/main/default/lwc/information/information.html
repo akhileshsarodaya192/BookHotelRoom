@@ -1,0 +1,38 @@
+<template>
+    <div class="infoApp">
+        
+        <h1>Welcome to Premium Hotels and Suites</h1>
+
+        <div class="slds-grid slds-wrap">
+
+            <div class="slds-col slds-size_6-of-12">
+                
+                <div class="slds-p-around_medium">
+
+                    <div class="staticInfo">
+
+                        <h2 style="font-weight: bold; font-style: italic;">Premium Hotels and Suites is a chain of hotels established in 1947</h2>
+
+                        <p>We serve in the following cities:</p>
+
+                        <ul>
+                            <template for:each={cities} for:item="city">
+
+                                <li key={city}>{city}</li>
+
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+
+        <div class="slds-col slds-size_6-of-12">
+
+            <div style={backgroundStyle}></div>
+
+        </div>
+
+    </div>
+
+    </div>
+</template>

@@ -1,0 +1,38 @@
+:host
+{
+    --slds-c-card-color-background:#b2beb5;
+}
+
+.filterstyle
+{
+    background:#c5c7c9;
+}
+
+h1
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+table
+{
+    width:100%;
+    border: 1px solid #000;
+    border-collapse:collapse;
+    font-size: 15px;
+    color:#333;
+}
+
+th
+{
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+}
+
+th
+{
+    padding: 10px;
+    font-size: 15px;
+}

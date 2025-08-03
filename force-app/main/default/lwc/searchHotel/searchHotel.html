@@ -1,0 +1,90 @@
+<template>
+    <lightning-card title="Find your next stay">
+
+        <div class="slds-m-around_medium">
+            
+            <lightning-input type="search" onchange={handleDestinationCity} placeholder="Enter Destination City" class="slds-var-m-bottom_large"></lightning-input>
+    
+            <lightning-button label="Search Hotel" variant="brand" onclick={handleSearchHotel} class="slds-button slds-var-m-bottom_large"></lightning-button>
+    
+            <template if:true={error}>{error}</template>
+    
+            <template if:true={hotelRecords}>
+
+                <div class="slds-grid slds-gutters slds-m-top_medium">
+
+                    <div class="slds-col slds-size_1-of-6">
+
+                        <div class="filterStyle">
+
+                            <h1>Filter by:</h1>
+
+                            <lightning-checkbox-group label="Property Rating" options={ratingOptions} value={selectedRatings} 
+                            onchange={handleRatingChange}></lightning-checkbox-group>
+
+                            <lightning-checkbox-group label="Room Facilities" options={amenitiesOptions} value={selectedAmenities} 
+                            onchange={handleAmenitiesChange}></lightning-checkbox-group>
+
+                            <lightning-slider label="Your budget (per night)" value={selectedPriceRange} min="1000" max="15000" step="100"
+                            onchange={handleSliderChange} style="font-weight:bold;"></lightning-slider>
+
+                            <div class="slds-text-align_center slds-m-top_medium">
+
+                                Selected Price Range: ₹{selectedPriceRange}
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slds-col slds-size_5-of-6">
+
+                        <table border="1" cellpadding="5" cellspacing="0" style="border-collapse:collapse;">
+
+                            <tbody>
+
+                                <tr>
+
+                                    <th style="text-align:center;">Hotel Name</th>
+
+                                    <th style="text-align:center;">City</th>
+
+                                    <th style="text-align:center;">Rating</th>
+
+                                    <th style="text-align:center;">Amenities</th>
+
+                                    <th style="text-align:center;">Price</th>
+
+                                </tr>
+
+                                <template for:each={hotelRecords} for:item="hotel">
+
+                                    <tr class="slds-hint-parent" key={hotel.Id}>
+
+                                        <td style="text-align:center;">{hotel.Name}</td>
+
+                                        <td style="text-align:center;">{hotel.City__c}</td>
+
+                                        <td style="text-align:center;">{hotel.Rating__c}</td>
+
+                                        <td style="text-align:center;">{hotel.Amenities__c}</td>
+
+                                        <td style="text-align:center;">{hotel.Price__c}</td>
+
+                                    </tr>
+
+                                </template>
+
+                            </tbody>
+
+                        </table>
+                            
+                </div>
+
+            </div>
+
+            </template>
+
+        </div>
+
+        </lightning-card>
+</template>
